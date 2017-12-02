@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FizzBuzz</title>
+</head>
+<body>
+<label>Type a Number</label>
+<input type="number" id="numEntered"/>
+<button onclick="myFunction()">Try it</button>
+
+<br><br>
+<div id="divID"></div>
+    
+    
+</body>
+    <script>
+   
+    function myFunction() {
+        
+        var EnteredNum = document.getElementById("numEntered").value;
+        var div = document.getElementById('divID');
+         document.getElementById("divID").innerHTML = "";
+
+        for(var i = 1;i<=EnteredNum;i++){
+        if(i % 15 === 0){
+           // document.write('FizzBuzz')
+            div.innerHTML += 'FizzBuzz<br>';
+           
+        }else if(i % 3 === 0){
+            // document.write('Fizz')
+            div.innerHTML += 'Fizz<br>';
+        }else if(i % 5 === 0){
+             //document.write('Buzz')
+            div.innerHTML += 'Buzz<br>';
+        }else{
+           // document.write(i)
+            div.innerHTML += i;
+            div.innerHTML += "<br>";
+        }}
+    }
+    </script>
+</html>
